@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
-var PORT = 3000;
+
+// for heroku
+var PORT = process.env.PORT || 3000;
 
 //app.get('/',function(req, resp) {
 //    resp.send('Hello, express');
