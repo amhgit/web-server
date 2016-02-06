@@ -6,17 +6,7 @@ var PORT = 3000;
 //    resp.send('Hello, express');
 //});
 
-var middleware = {
-    requiredAuthentication: function(req, resp, next) {
-        console.log('private route hit');
-        next();
-    },
-    logger: function(req, resp, next) {
-        d = new Date().toString();
-        console.log('Request (' + d + '): ' + req.method + ' ' + req.originalUrl);
-        next();
-    }
-};
+var middleware = require('./middleware.js');
 
 // especify middleware up on top, otherwise it will never run
 
